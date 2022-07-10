@@ -2,7 +2,7 @@
 set -e
 
 DISTRO=ubuntu
-SUITE=xenial
+SUITE=bionic
 ARCH=amd64
 DISKSIZE=12287
 LXC=0
@@ -17,7 +17,7 @@ usage() {
   cat << EOF
   --help                    display this help and exit
   --distro D                build distro D (e.g. debian) instead of ubuntu
-  --suite U                 build suite U instead of xenial
+  --suite U                 build suite U instead of bionic
   --arch A                  build architecture A (e.g. i386) instead of amd64
   --disksize S              disk/image size S in MB (default 12287)
   --lxc                     use lxc instead of kvm
@@ -37,7 +37,7 @@ usage() {
   make a copy of this files to some local dir and modify them locally:
   e.g. set env variable "DEBOOTSTRAP_DIR=./mydeboot/", then copy or link
   system's version of files there, and modify them there
-  (e.g. copy your debootstrap-script file "xenial" to "./mydeboot/scripts/").
+  (e.g. copy your debootstrap-script file "bionic" to "./mydeboot/scripts/").
 
   Set env GITIAN_SUDO_USE_DEBOOTSTRAP_DIR="yes" to allow sudo for debootstrap
   to use flags like --preserve-env that are required for DEBOOTSTRAP_DIR to work.
