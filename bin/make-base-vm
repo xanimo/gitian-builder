@@ -103,11 +103,6 @@ if [ $# != 0 ] ; then
   done
 fi
 
-if [ $DOCKER = "1" ]; then
-  MIRROR_DEFAULT=172.17.0.1
-else
-  MIRROR_DEFAULT=127.0.0.1
-fi
 MIRROR_BASE=http://${MIRROR_HOST:-$MIRROR_DEFAULT}:3142
 
 if [ $DISTRO = "ubuntu" ]; then
